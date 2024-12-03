@@ -10,7 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        "celtic-blue": "var(--celtic-blue)",
+        "payne-gray": "var(--payne-gray)",
+        "payne-gray-darker": "var(--payne-gray-darker)",
+        "french-gray": "var(--french-gray)",
+        "alice-blue": "var(--alice-blue)",
+        "jordy-blue": "var(--jordy-blue)",
+        gunmetal: "var(--gunmetal)",
       },
     },
   },

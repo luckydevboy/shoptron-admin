@@ -9,6 +9,7 @@ const Users = () => {
   const headers = [
     { key: "name", title: "Name" },
     { key: "email", title: "Email" },
+    { key: "role", title: "Role" },
     { key: "_id", title: "ID" },
   ];
 

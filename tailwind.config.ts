@@ -10,13 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        "celtic-blue": "var(--celtic-blue)",
-        "payne-gray": "var(--payne-gray)",
-        "payne-gray-darker": "var(--payne-gray-darker)",
-        "french-gray": "var(--french-gray)",
-        "alice-blue": "var(--alice-blue)",
-        "jordy-blue": "var(--jordy-blue)",
-        gunmetal: "var(--gunmetal)",
+        "primary-300": "var(--primary-300)",
+        "primary-500": "var(--primary-500)",
+
+        "neutral-100": "var(--neutral-100)",
+        "neutral-200": "var(--neutral-200)",
+        "neutral-300": "var(--neutral-300)",
+        "neutral-400": "var(--neutral-400)",
+        "neutral-700": "var(--neutral-700)",
+        "neutral-800": "var(--neutral-800)",
+
+        "error-600": "var(--error-600)",
       },
     },
   },

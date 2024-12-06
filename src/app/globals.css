@@ -4,13 +4,18 @@
 
 :root {
   --background: #EEF2F8;
-  --celtic-blue: #2770E1;
-  --payne-gray: #616E80;
-  --payne-gray-darker: #536377;
-  --gunmetal: #2C3540;
-  --french-gray: #B8C1D0;
-  --alice-blue: #DAE2EE;
-  --jordy-blue: #9EBCED;
+
+  --primary-300: #9EBCED;
+  --primary-500: #2770E1;
+
+  --neutral-100: #DAE2EE;
+  --neutral-200: #B8C1D0;
+  --neutral-300: #616E80;
+  --neutral-400: #536377;
+  --neutral-700: #2C3540;
+  --neutral-800: #2E3846;
+
+  --error-600: #dc2626
 }
 
 body {

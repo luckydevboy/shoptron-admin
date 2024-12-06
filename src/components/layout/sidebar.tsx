@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ChartPieIcon,
   PackageIcon,
@@ -7,6 +9,7 @@ import {
 import Link from "next/link";
 import { createElement } from "react";
 import { cx } from "class-variance-authority";
+import { usePathname } from "next/navigation";
 
 type Props = {
   className?: string;
@@ -40,13 +43,20 @@ const navItems = [
 ];
 
 const Sidebar = ({ className }: Props) => {
+  const pathname = usePathname();
+
   return (
     <aside className={cx(className, "space-y-4")}>
       {navItems.map((item) => (
         <Link
           key={item.key}
           href={item.href}
-          className="flex items-center gap-x-3 text-payne-gray-darker font-semibold text hover:text-gunmetal transition-colors"
+          className={cx(
+            pathname === item.href
+              ? "text-primary-500"
+              : "text-neutral-400 hover:text-neutral-700",
+            "flex items-center gap-x-3 font-semibold text transition-colors",
+          )}
         >
           {createElement(item.icon, { className: "w-4 h-4", strokeWidth: 2.5 })}
           {item.name}

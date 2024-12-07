@@ -1,9 +1,9 @@
 import React from "react";
-import { Simulate } from "react-dom/test-utils";
-import error = Simulate.error;
 
 type Props = {
   headers: { key: string; title: string }[];
+  // FIXME: This should be generic
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any[] | undefined;
   error: string;
   isLoading: boolean;
@@ -29,7 +29,7 @@ const Table = ({ headers, data, error, isLoading }: Props) => {
         <tbody className="divide-y divide-neutral-100">
           {(isLoading || error) && (
             <tr>
-              <td colSpan={3} className="px-6 py-4">
+              <td colSpan={headers.length} className="px-6 py-4">
                 {isLoading ? (
                   <svg
                     className="animate-spin h-4 w-4 text-primary-500 mx-auto"
@@ -64,7 +64,7 @@ const Table = ({ headers, data, error, isLoading }: Props) => {
                   key={colIndex}
                   className="px-6 py-4 whitespace-nowrap text-sm text-neutral-700"
                 >
-                  {item[header.key]}
+                  {item[header.key] as React.ReactNode}
                 </td>
               ))}
             </tr>
